@@ -5,6 +5,7 @@ import { TYPE } from "../../global/redux/reducers/AuthReducer";
 
 
 function LoginPage({ setAuth, login, auth }) {
+  // Just to show that the props auth is global
   useEffect(() => {
     console.log(auth);
   }, [auth])

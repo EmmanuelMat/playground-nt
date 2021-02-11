@@ -8,7 +8,7 @@ import LoginPage from "./LoginPage";
 export default function AuthPage() {
   return (
     <Switch>
-      <Route path="/" component={() => <LoginPage  />} />
+      <Route path="/" component={LoginPage} />
       <Route path="/logout" component={() => <LogoutComponent  />} />
     </Switch>
   );

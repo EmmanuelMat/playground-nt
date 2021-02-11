@@ -6,6 +6,7 @@ const initState = {
 export const TYPE = {
   AUTH: "AUTH",
   LOG_OUT: "LOG_OUT",
+  FETCH_USERS: "FETCH_USERS"
 };
 
 export default (state = initState, action) => {
