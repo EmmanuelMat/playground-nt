@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { useHistory } from "react-router-dom";
 
-export default function LoginContainer({ setAuth }) {
-    const history = useHistory();
-    return (
+export default function LoginContainer({ login }) {
+  const history = useHistory();
+  const [userName, setuserName] = useState("");
+  return (
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-2"></div>
@@ -19,7 +20,15 @@ export default function LoginContainer({ setAuth }) {
               <form>
                 <div class="form-group">
                   <label class="form-control-label">USERNAME</label>
-                  <input type="text" class="form-control" />
+                  <input
+                    value={userName}
+                    onChange={(e) => {
+                      e.persist();
+                      setuserName(e.target.value);
+                    }}
+                    type="text"
+                    class="form-control"
+                  />
                 </div>
                 <div class="form-group">
                   <label class="form-control-label">PASSWORD</label>
@@ -31,9 +40,9 @@ export default function LoginContainer({ setAuth }) {
                   <div class="col-lg-6 login-btm login-button">
                     <button
                       onClick={() => {
-                          setAuth(true)
-                          history.push("/homepage")
-                        }}
+                        history.push("/homepage");
+                        login(userName);
+                      }}
                       type="submit"
                       class="btn btn-outline-primary"
                     >
