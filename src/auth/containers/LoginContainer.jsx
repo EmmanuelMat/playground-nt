@@ -6,20 +6,20 @@ export default function LoginContainer({ login }) {
   const history = useHistory();
   const [userName, setuserName] = useState("");
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-2"></div>
-        <div class="col-lg-6 col-md-8 login-box">
-          <div class="col-lg-12 login-key">
-            <i class="fa fa-key" aria-hidden="true"></i>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-3 col-md-2"></div>
+        <div className="col-lg-6 col-md-8 login-box">
+          <div className="col-lg-12 login-key">
+            <i className="fa fa-key" aria-hidden="true"></i>
           </div>
-          <div class="col-lg-12 login-title">ADMIN PANEL</div>
+          <div className="col-lg-12 login-title">ADMIN PANEL</div>
 
-          <div class="col-lg-12 login-form">
-            <div class="col-lg-12 login-form">
+          <div className="col-lg-12 login-form">
+            <div className="col-lg-12 login-form">
               <form>
-                <div class="form-group">
-                  <label class="form-control-label">USERNAME</label>
+                <div className="form-group">
+                  <label className="form-control-label">USERNAME</label>
                   <input
                     value={userName}
                     onChange={(e) => {
@@ -27,24 +27,24 @@ export default function LoginContainer({ login }) {
                       setuserName(e.target.value);
                     }}
                     type="text"
-                    class="form-control"
+                    className="form-control"
                   />
                 </div>
-                <div class="form-group">
-                  <label class="form-control-label">PASSWORD</label>
-                  <input type="password" class="form-control" />
+                <div className="form-group">
+                  <label className="form-control-label">PASSWORD</label>
+                  <input type="password" className="form-control" />
                 </div>
 
-                <div class="col-lg-12 loginbttm">
-                  <div class="col-lg-6 login-btm login-text"></div>
-                  <div class="col-lg-6 login-btm login-button">
+                <div className="col-lg-12 loginbttm">
+                  <div className="col-lg-6 login-btm login-text"></div>
+                  <div className="col-lg-6 login-btm login-button">
                     <button
                       onClick={() => {
                         history.push("/homepage");
                         login(userName);
                       }}
                       type="submit"
-                      class="btn btn-outline-primary"
+                      className="btn btn-outline-primary"
                     >
                       LOGIN
                     </button>
@@ -53,7 +53,7 @@ export default function LoginContainer({ login }) {
               </form>
             </div>
           </div>
-          <div class="col-lg-3 col-md-2"></div>
+          <div className="col-lg-3 col-md-2"></div>
         </div>
       </div>
     </div>

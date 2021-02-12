@@ -15,23 +15,27 @@ export default function TodoPage() {
     if (limit >= 1) setlimit(limit - 1);
   };
 
-  
   return (
     <>
       {todos && (
         <>
-          <ListContainer data={todos} onItemClick={updateTodo} />
+          <ListContainer
+            data={todos}
+            onItemClick={updateTodo}
+          />
           <button
+            data-testid="decrement-limit-btn"
             onClick={decrementLimit}
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
           >
             -
           </button>
           <button
+            data-testid="increment-limit-btn"
             onClick={incrementLimit}
             type="button"
-            class="btn btn-success"
+            className="btn btn-success"
           >
             +
           </button>

@@ -1,10 +1,12 @@
-import './App.css';
-import Routes from './Routes';
-import TodoPage from './todo/list/pages/TodoPage';
-
+import { Provider } from "react-redux";
+import "./App.css";
+import Routes from "./Routes";
+import { store } from "./global/redux/store/Store";
 function App() {
   return (
-    <Routes />
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 }
 
